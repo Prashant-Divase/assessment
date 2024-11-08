@@ -1,0 +1,6 @@
+# config/config.yaml
+base_url: "https://restful-booker.herokuapp.com"
+endpoint: "auth"
+timeout: 10
+username: "admin"
+password: "password123"

@@ -91,10 +91,10 @@ def test_get_booking_filter_with_first_name_last_nameid(api):
     assert filter_first_last_name_response[0]['bookingid'] == booking_id
 
 @pytest.mark.sanity
-def test_update_booking(api):
+def test_update_booking(api,config):
     global booking_id, booking_response,lastname,first_name
     data= generate_random_booking_data()
-    token = api.generate_token()
+    token = config.get("token")
     headers = {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
@@ -107,10 +107,9 @@ def test_update_booking(api):
     assert response.status_code == 200, f"Expected status code 200, got {response.status_code}"
 
 @pytest.mark.sanity
-def test_delete_booking(api):
+def test_delete_booking(api,config):
     global booking_id, booking_response,lastname,first_name
-    data= generate_random_booking_data()
-    token = api.generate_token()
+    token = config.get("token")
     headers = {
             'Content-Type': 'application/json',
             'Accept': 'application/json',

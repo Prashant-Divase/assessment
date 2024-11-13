@@ -1,6 +1,14 @@
-# config/config.yaml
-base_url: "https://restful-booker.herokuapp.com"
-endpoint: "auth"
-timeout: 10
-username: "admin"
-password: "password123"
+qa:
+  base_url: "https://restful-booker.herokuapp.com"
+  endpoint: "auth"
+  use_token: true
+  timeout: 10
+  username: "admin"
+  password: "password123"
+
+staging:
+  base_url: "https://staging-restful-booker.herokuapp.com"
+  endpoint: "auth"
+  timeout: 20
+  username: "staging_admin"
+  password: "staging_password456"

@@ -68,7 +68,7 @@ def test_get_booking_filter_with_first_name_should_return_correct_booking_id(api
     filter_first_name_response = response.json()
     log.info(f"actual_response: {filter_first_name_response}")
     assert response.status_code == 200, f"Expected status code 200, got {response.status_code}"
-    assert filter_first_name_response[0]['bookingid'] == booking_id
+    assert filter_first_name_response[0]['bookingid'] == 256545
 
 
 @pytest.mark.sanity

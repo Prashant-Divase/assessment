@@ -17,28 +17,6 @@ def load_config(env):
 
     return config_data
 
-# def generate_token(config):
-#     """Generate an authentication token using credentials from config.yaml."""
-#     url = f"{config['base_url']}/{config['endpoint']}"
-#
-#     payload = json.dumps({
-#         "username": config['username'],
-#         "password": config['password']
-#     })
-#
-#     headers = {
-#         "Content-Type": "application/json"
-#     }
-#     response = requests.post(url, headers=headers, data=payload)
-#     if response.status_code == 200:
-#         token = response.json().get("token")
-#         if token:
-#             print(f"token is-- {token} ")
-#             return token
-#         else:
-#             raise ValueError("Token not found in the response.")
-#     else:
-#         raise Exception(f"Failed to obtain token: {response.status_code} {response.text}")
 
 def generate_token(config):
     """Generate an authentication token using credentials from config.yaml."""
